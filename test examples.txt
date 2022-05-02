@@ -1,0 +1,34 @@
+-- displays customers with orders, the price of what they got and how many
+select customer.first_name, customer.last_name, order_line.quantity, order_t.date, order_line.price 
+From customer join order_t
+join order_line
+on customer.customer_id = order_t.customer_id
+AND order_t.order_id = order_line.order_id;
+
+-- return a tv brand, supplier name, the screen size, and howm many in the supply
+select television.brand, supplier.supplier_name, television.description, television.screen_size, supply.quantity
+from television
+join supply using (model_number)
+join supplier using (supplier_id);
+
+-- check the date on when a employee sold to a customer
+select employee.first_name, customer.first_name, order_t.date
+from employee 
+join order_T using (employee_id)
+join customer using (customer_id);
+
+-- what screen size a customer ordered
+select customer.first_name, order_t.date, order_line.price, order_line.quantity, television.screen_size
+from customer
+join order_t using (customer_id)
+join order_line using (order_id)
+join television using (model_number);
+
+-- name of customer, brand, and supplier
+select customer.first_name, customer.last_name, television.brand, supplier.supplier_name
+from customer
+join order_t using (customer_id)
+join order_line using (order_id)
+join television using (model_number)
+join supply using (model_number)
+join supplier using (supplier_id);
