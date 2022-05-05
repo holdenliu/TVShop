@@ -1,5 +1,6 @@
 # Group #3 TV-Shop Database Project
 **Resources**
+
 Google Docs (Business Rules, Entities): 
 https://docs.google.com/document/d/1OxTHGf_cYTpBilAnaAuJwdyoisWBAGcmcjEjEsRjM6c/edit?usp=sharing\
 
